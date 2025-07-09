@@ -1,0 +1,31 @@
+Sistema de Controle de RH (Recursos Humanos)
+
+* Cadastros
+
+** Cadastro de funcionarios
+-> Dados funcionario
+--> nome
+--> email contato
+--> cpf
+--> funcao 
+--> salario
+--> data de admissao
+--> data de demissao
+--> status
+
+** Cadastro de usuarios
+-> Dados usuário
+--> nome
+--> Perfil de acesso
+--> senha
+--> Status (ativo ou inativo)
+
+* Realatorios
+-> Funcionários
+-> Usuários
+-> Funcionários por funcao
+-> Funcionarios ativos
+
+* Consultas
+
+* Salvar e ler dados de arquivos
