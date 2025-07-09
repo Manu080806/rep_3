@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include <stdint.h>
 #include "./include/menus.h"
 #include "./include/types.h"
@@ -8,7 +10,7 @@
 
 #define SAIR    0
 
-int main()
+int main(int argc, char** argv)
 {
     uint8_t opcao, sub_menu;
     no_t *aux = NULL;

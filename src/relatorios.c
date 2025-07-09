@@ -3,8 +3,7 @@
 #include <string.h>
 #include <stdbool.h>
 
-void listar_todos_registros_rh(no_t *ptr_lista_rh)
-{
+void listar_todos_registros_rh(no_t *ptr_lista_rh) {
     limpar_tela();
 
     msg_cabecalho("Relatorio de Funcionarios");
@@ -17,8 +16,7 @@ void listar_todos_registros_rh(no_t *ptr_lista_rh)
     msg_press_enter();
 }
 
-void mostrar_dados_registro_rh(no_t *registro)
-{
+void mostrar_dados_registro_rh(no_t *registro) {
     
     printf("Codigo.....................: %hhi\n", registro->dados.codigo);
     printf("Nome da pessoa.............: %s\n", registro->dados.nome);
@@ -34,8 +32,7 @@ void mostrar_dados_registro_rh(no_t *registro)
 
 }
 
-void relatorio_faixa_salarial(no_t *ptr_lista_rh, float minSal, float maxSal)
-{
+void relatorio_faixa_salarial(no_t *ptr_lista_rh, float minSal, float maxSal) {
     no_t *ptr_atual = ptr_lista_rh;
     int contador = 0;
 
@@ -61,8 +58,7 @@ void relatorio_faixa_salarial(no_t *ptr_lista_rh, float minSal, float maxSal)
     }
 }
 
-void mostrar_funcionarios_ativos(no_t *ptr_lista_rh)
-{
+void mostrar_funcionarios_ativos(no_t *ptr_lista_rh) {
     limpar_tela();
 
     msg_cabecalho("Relatorio de Funcionarios Ativos");
@@ -80,8 +76,7 @@ void mostrar_funcionarios_ativos(no_t *ptr_lista_rh)
     msg_press_enter();
 }
 
-void listar_funcionarios_por_funcao(string funcao, no_t *ptr_lista_rh)
-{
+void listar_funcionarios_por_funcao(string funcao, no_t *ptr_lista_rh) {
     bool flag = false;
 
     limpar_tela();

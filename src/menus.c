@@ -3,8 +3,7 @@
 #include "../include/menus.h"
 #include "../include/utils.h"
 
-uint8_t menu_principal()
-{
+uint8_t menu_principal(){
     uint8_t opcao;
 
     limpar_tela();
@@ -22,8 +21,7 @@ uint8_t menu_principal()
     return opcao;
 }
 
-uint8_t menu_cadastros()
-{
+uint8_t menu_cadastros(){
     limpar_tela();
 
     uint8_t opcao;
@@ -43,8 +41,7 @@ uint8_t menu_cadastros()
     return opcao;
 }
 
-uint8_t menu_relatorios()
-{
+uint8_t menu_relatorios(){
     limpar_tela();
 
     uint8_t opcao;
@@ -64,8 +61,7 @@ uint8_t menu_relatorios()
     return opcao;
 }
 
-uint8_t menu_consultas()
-{
+uint8_t menu_consultas(){
     limpar_tela();
 
     uint8_t opcao;
@@ -81,8 +77,7 @@ uint8_t menu_consultas()
     return opcao;    
 }
 
-uint8_t manipulacao_arquivos()
-{
+uint8_t manipulacao_arquivos(){
     limpar_tela();
 
     uint8_t opcao;
