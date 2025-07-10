@@ -41,10 +41,12 @@ int main(int argc, char** argv)
                         sub_menu = menu_cadastros();
                         switch (sub_menu) {
                             
-                            case 1: break;
+                            case 1: aux = novo_registro_rh();
+                                    insere_registro_inicio_rh(aux, &lista_rh);
+                                    break;
                             
                             case 2: aux = novo_registro_rh();
-                                    insere_registro_inicio_rh(aux, &lista_rh);
+                                    insere_registro_fim_rh(aux, &lista_rh);
                                     break;
 
                             case 3: 
@@ -74,9 +76,13 @@ int main(int argc, char** argv)
                                         msg_press_enter();
                                     }
                                     break;
-
-
-                            
+                            case 5:
+                                    printf("Qual o nome do funcionario que desejas excluir? ");
+                                    fgets(nome_pessoa, T_STR, stdin);
+                                    retirar_enter(nome_pessoa);
+                                    to_upper(nome_pessoa);
+                                    excluir_registro_rh(nome_pessoa , &lista_rh);
+                                    break;                            
                         }
                     } while (sub_menu != SAIR);
 

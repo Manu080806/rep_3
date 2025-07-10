@@ -11,7 +11,7 @@ no_t *localizar_ultimo_registro_rh(no_t *ptr_lista_rh);
 no_t *novo_registro_rh();
 void insere_registro_inicio_rh(no_t *novo, lista_t *lista_rh);
 void insere_registro_fim_rh(no_t *novo, lista_t *lista_rh);
-void excluir_registro_rh(string nome , no_t *registro, lista_t *lista_rh);
+void excluir_registro_rh(string nome , lista_t *lista_rh);
 void inativar_funcionario(no_t *registro, data_t data);
 
 

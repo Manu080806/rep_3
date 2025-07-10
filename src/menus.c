@@ -28,8 +28,8 @@ uint8_t menu_cadastros(){
 
     printf("| MENU CADASTROS |\n");
     printf("------------------\n");
-    printf("1.Cadastro de usuarios do sistema\n");
-    printf("2.Cadastro de pessoas (funcionarios)\n");
+    printf("1.Cadastro de pessoas (pelo inicio)\n");
+    printf("2.Cadastro de pessoas (pelo fim)\n");
     printf("3.Ordenar funcionarios (A-Z)\n");
     printf("4.Inativar funcionario\n");
     printf("5.Excluir funcionario\n");

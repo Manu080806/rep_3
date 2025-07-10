@@ -2,6 +2,7 @@
 #include "../include/utils.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 bool is_lista_rh_vazia(no_t *ptr_lista_rh){
     if (ptr_lista_rh) return false;  // Lista não vazia
@@ -100,7 +101,6 @@ void insere_registro_fim_rh(no_t *novo, lista_t *lista_rh) {
 
     // Atribui o código ao funcionário e incrementa o contador de nós da lista
     novo->dados.codigo = ++lista_rh->nr_nos;
-    novo->dados.codigo = NULL;
 
     //verifica se a lista está vazia
     if (is_lista_rh_vazia(lista_rh->cabeca)) {
@@ -111,10 +111,10 @@ void insere_registro_fim_rh(no_t *novo, lista_t *lista_rh) {
     }
 }
 
-void excluir_registro_rh(string nome , no_t *registro, lista_t *lista_rh) {
-    no_t *anterior = NULL , *atual = registro;
+void excluir_registro_rh(string nome ,  lista_t *lista_rh) {
+    no_t *anterior = NULL , *atual = lista_rh->cabeca;
 
-    if (!registro || !lista_rh) {
+    if (is_lista_rh_vazia(lista_rh->cabeca) || !lista_rh) {
         printf("Funcionário ou lista inválidos\n");
         return; }
     
@@ -127,12 +127,11 @@ void excluir_registro_rh(string nome , no_t *registro, lista_t *lista_rh) {
     // Verifica se a pessoa foi encontrada
     if (atual == NULL) {
         printf("Funcionário %s não foi encontrado na lista para exclusão.\n", nome);
-        return NULL; 
     }
 
     // Excluir o nó encontrado
     if (anterior == NULL) {
-        registro = atual->proximo; // A cabeça da lista precisa ser atualizada para o próximo nó
+        lista_rh->cabeca = atual->proximo; // A cabeça da lista precisa ser atualizada para o próximo nó
     } else {
         anterior->proximo = atual->proximo; // O nó anterior aponta para o próximo do nó atual 
     }
@@ -140,8 +139,6 @@ void excluir_registro_rh(string nome , no_t *registro, lista_t *lista_rh) {
     // Libera a memória do nó excluído
     printf("Funcionário %s foi excluído da lista com sucesso.\n", atual->dados.nome);
     free(atual); 
-
-    return registro; 
 }
 
 void inativar_funcionario(no_t *registro, data_t data) {
